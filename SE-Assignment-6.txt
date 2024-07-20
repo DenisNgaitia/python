@@ -1,0 +1,168 @@
+﻿SE-Assignment-6
+1. Python Basics
+What is Python, and what are some of its key features that make it popular among developers? Provide examples of use cases where Python is particularly effective.
+Python is a high-level, interpreted programming language known for its simplicity and readability. Its key features include:
+1. Easy to Read and Write: Python’s syntax is clean and straightforward, making it easy for beginners to learn and understand.
+2. Interpreted Language: Python code is executed line-by-line, which helps with debugging and development.
+3. Dynamic Typing: Variables in Python are dynamically typed, meaning you don’t need to declare their type explicitly.
+4. Extensive Standard Library: Python has a vast standard library that supports many common programming tasks.
+5. Versatile: Python can be used for web development, data analysis, artificial intelligence, scientific computing, and more.
+
+
+Examples of use cases where Python is effective:
+1. Web Development: Using frameworks like Django and Flask.
+2. Data Science and Machine Learning: Libraries like pandas, NumPy, and scikit-learn.
+3. Automation and Scripting: Automating repetitive tasks with scripts.
+4. Software Development: Building desktop applications and development tools.
+5. Game Development: Using libraries like Pygame.
+
+
+1. Installing Python
+Describe the steps to install Python on your operating system (Windows, macOS, or Linux). Include how to verify the installation and set up a virtual environment.
+Linux:
+* Open the terminal.
+* Run sudo apt-get update to update the package list.
+* Install Python with sudo apt-get install python3.
+Verify Installation:
+* Open a terminal (or Command Prompt on Windows).
+* Type python --version or python3 --version to check the installed version.
+Setting up a Virtual Environment:
+* Open a terminal.
+* Run python -m venv name
+* Activate the virtual environment:
+* source myenv/bin/activate
+
+
+Python Syntax and Semantics
+Write a simple Python program that prints "Hello, World!" to the console. Explain the basic syntax elements used in the program.
+
+
+        print("Hello, World!")
+Explanation:
+* print: This is a built-in function that outputs the specified message to the console.
+* "Hello, World!": This is a string literal enclosed in double quotes.
+Data Types and Variables
+List and describe the basic data types in Python. Write a short script that demonstrates how to create and use variables of different data types.
+Basic Data Types:
+1. int: Integer type (e.g., 42)
+2. float: Floating-point number (e.g., 3.14)
+3. str: String type (e.g., "hello")
+4. bool: Boolean type (e.g., True, False)
+5. list: Ordered collection (e.g., [1, 2, 3])
+6. dict: Dictionary type (e.g., {"key": "value"})
+7. tuple: Immutable ordered collection (e.g., (1, 2, 3))
+8. set: Unordered collection of unique elements (e.g., {1, 2, 3})
+Script:
+        # Integer
+a = 42
+print(a, type(a))
+
+
+# Float
+b = 3.14
+print(b, type(b))
+
+
+# String
+c = "hello"
+print(c, type(c))
+
+
+# Boolean
+d = True
+print(d, type(d))
+
+
+# List
+e = [1, 2, 3]
+print(e, type(e))
+
+
+# Dictionary
+f = {"key": "value"}
+print(f, type(f))
+
+
+# Tuple
+g = (1, 2, 3)
+print(g, type(g))
+
+
+# Set
+h = {1, 2, 3}
+print(h, type(h))
+Control Structures
+Explain the use of conditional statements and loops in Python. Provide examples of an if-else statement and a for loop.
+Conditional Statements: Used to execute code based on certain conditions.
+x = 10
+if x > 5:
+    print("x is greater than 5")
+else:
+    print("x is 5 or less")
+Loops: Used to iterate over a sequence of elements.
+For Loop:
+for i in range(5):
+    print(i)
+
+
+Functions in Python
+What are functions in Python, and why are they useful? Write a Python function that takes two arguments and returns their sum. Include an example of how to call this function.
+Functions are reusable blocks of code that perform a specific task. They help in organising code, avoiding repetition, and making the code more modular.
+def add(a, b):
+    return a + b
+
+
+# Calling the function
+result = add(5, 3)
+print(result)
+Lists and Dictionaries
+Describe the differences between lists and dictionaries in Python. Write a script that creates a list of numbers and a dictionary with some key-value pairs, then demonstrates basic operations on both.
+Lists are ordered collections of elements, accessible by index. 
+Dictionaries are collections of key-value pairs, accessible by keys.
+# List of numbers
+numbers = [1, 2, 3, 4, 5]
+print(numbers)
+numbers.append(6)  # Adding an element
+print(numbers)
+
+
+# Dictionary with key-value pairs
+person = {"name": "Alice", "age": 30}
+print(person)
+person["city"] = "New York"  # Adding a new key-value pair
+print(person)
+
+
+Exception Handling
+What is exception handling in Python? Provide an example of how to use try, except, and finally blocks to handle errors in a Python script.
+Exception handling in Python allows you to handle errors gracefully without stopping the execution of the program.
+try:
+    x = 10 / 0
+except ZeroDivisionError:
+    print("Cannot divide by zero!")
+finally:
+    print("This block is always executed.")
+
+
+Modules and Packages
+Explain the concepts of modules and packages in Python. How can you import and use a module in your script? Provide an example using the maths module.
+Modules are files containing Python code that can be imported and used in other scripts. Packages are collections of modules.
+Example using the maths module:
+        import maths
+
+
+result = math.sqrt(16)
+print(result)
+File I/O
+How do you read from and write to files in Python? Write a script that reads the content of a file and prints it to the console, and another script that writes a list of strings to a file.
+Reading from a file:
+with open('example.txt', 'r') as file:
+    content = file.read()
+    print(content)
+Writing to a file:
+lines = ["Hello, World!", "Python is great!"]
+
+
+with open('output.txt', 'w') as file:
+    for line in lines:
+        file.write(line + "\n")
